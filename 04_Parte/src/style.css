@@ -1,0 +1,290 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background: #bbbbbb;
+  padding: 20px 0;
+}
+
+.caixa {
+  position: relative;
+  width: 940px;
+  margin: auto;
+}
+
+nav {
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #c78c19;
+  text-decoration: underline;
+}
+
+main {
+  /* width: 940px;
+  margin: 0 auto; */
+}
+
+.produtos {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.produtos li {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+
+.produtos li:hover {
+  border-color: #c78c19;
+  font-size: 40px;
+}
+
+.produtos li:active {
+  border-color: #088c19;
+}
+
+.produtos li:hover h2 {
+  font-size: 34px;
+}
+
+.produtos h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.produto-descricao {
+  font-size: 18px;
+}
+
+.produto-preco {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+
+footer {
+  text-align: center;
+  background: url("../assets/img/bg.jpg");
+  padding: 40px 0;
+}
+
+.copyrights {
+  font-size: 13px;
+  color: #ffffff;
+  margin: 20px 0 0;
+}
+
+.banner {
+  width: 100%;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-size: 2em;
+  margin: 0 0 1em;
+  clear: both;
+  color: rgba(0, 0, 0, 1); /*? Opacidade nas cores */
+  /* text-shadow: 2px 2px #FF0000; ? Sombra para o texto */
+}
+
+.principal {
+  padding: 3em 0;
+  background: #fefefe;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.principal p {
+  margin: 0 0 1em;
+}
+
+.principal strong {
+  font-weight: bold;
+}
+
+.principal em {
+  font-style: italic;
+}
+
+.beneficios {
+  padding: 3em 0;
+  background: #888888;
+  /* box-shadow: inset 0 0 30px #FF0000;  ? Sombra Interna */
+}
+
+.conteudo-beneficios {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.lista-beneficios {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  /* list-style: disc; */
+  float: left;
+}
+
+.lista-beneficios :first-child {
+  font-weight: bold;
+}
+
+.lista-beneficios ::before {
+  content: "★ ";
+}
+
+.itens {
+  line-height: 1.5;
+}
+
+.imagem-beneficios {
+  width: 60%;
+  transition: 400ms; /*? Css Animations */
+  /* box-shadow: 10px 10px 30px 20px #000000, -10px -10px yellow, -20px 20px rgba(255, 0, 0, .5); */
+  box-shadow: 10px 10px 10px #000000;
+}
+
+.imagem-beneficios:hover {
+  opacity: 0.3; /*? Opacidade em elementos*/
+}
+
+.imagem-utensilios {
+  width: 120px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.mapa {
+  padding: 3em 0;
+  background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa-conteudo {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.mapa p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.video {
+  width: 560px;
+  margin: 2em auto;
+}
+
+/*! Responsividade */
+@media screen and (max-width: 480px) {
+  .caixa,
+  .principal,
+  .conteudo-beneficios,
+  .mapa-conteudo,
+  .video,
+  .produtos {
+    width: auto;
+  }
+
+  .produtos li {
+    display: block;
+    width: 80%;
+    margin: 1.5% auto;
+  }
+
+  .produtos li img {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .lista-beneficios {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .imagem-beneficios {
+    width: 100%;
+  }
+
+}
+
+/*! Pseudo Elementos e Classes */
+
+/* .titulo-principal:first-letter {
+  font-weight: bold;
+}
+
+.titulo-principal::before {
+  content: "[ ";
+}
+
+.titulo-principal::after {
+  content: " ]";
+}
+
+p::first-line {
+  font-style: italic;
+} */
+
+/*! Pseudo Elementos e Classes*/
+
+/*! Seletores Avançados */
+
+/** Filho Direto da tag main */
+/* main > p {
+  background-color: red;
+} */
+
+/** Irmão/Elemento proximo da tag img  */
+/* img + p {
+  background-color: blue;
+} */
+
+/** Todos os seletores p depois da tag img  */
+/* img ~ p {
+  color: green;
+} */
+
+/** Selecionando todos as tags p dentro da classe principal
+ ** que não tem o id missao   */
+/* .principal p:not(#missao) {
+ font-style: italic;
+} */
+
+/*! Seletores Avançados */
+
+/*! Calculos  */
+/** Funciona com a função calc() */
